@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dsoa -->
+      <package
+            uri="http:///br/ufpe/cin/dsoa/api/qos.ecore"
+            class="br.ufpe.cin.dsoa.api.qos.QosPackage"
+            genModel="models/dsoa.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dsoa -->
+      <package
+            uri="http:///br/ufpe/cin/dsoa/api/util.ecore"
+            class="br.ufpe.cin.dsoa.api.util.UtilPackage"
+            genModel="models/dsoa.genmodel"/>
+   </extension>
+
+</plugin>

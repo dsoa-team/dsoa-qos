@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:br.ufpe.cin.dsoa.api.util="http:///br/ufpe/cin/dsoa/api/util.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="br.ufpe.cin.dsoa.api.util" ecore:package="br.ufpe.cin.dsoa.api.util" targetNamespace="http:///br/ufpe/cin/dsoa/api/util.ecore">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element ecore:ignore="true" name="Property" type="br.ufpe.cin.dsoa.api.util:Property"/>
+  <xsd:element ecore:ignore="true" name="PropertyValue" type="br.ufpe.cin.dsoa.api.util:PropertyValue"/>
+  <xsd:complexType name="Property">
+    <xsd:attribute name="namespace" type="ecore:EString"/>
+    <xsd:attribute name="name" type="ecore:EString"/>
+    <xsd:attribute name="fullname" type="ecore:EString"/>
+    <xsd:attribute name="type" type="ecore:EString"/>
+    <xsd:attribute ecore:unsettable="false" name="required" type="ecore:EBoolean"/>
+    <xsd:attribute ecore:unsettable="false" name="generated" type="ecore:EBoolean"/>
+  </xsd:complexType>
+  <xsd:complexType name="PropertyValue">
+    <xsd:attribute name="value" type="ecore:EJavaObject"/>
+    <xsd:attribute ecore:reference="br.ufpe.cin.dsoa.api.util:Property" name="property" type="xsd:anyURI"/>
+  </xsd:complexType>
+</xsd:schema>
